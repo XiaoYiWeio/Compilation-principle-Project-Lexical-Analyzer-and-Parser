@@ -1,0 +1,1319 @@
+第1步
+栈1-符号栈:<函数定义> # 
+栈2-输入栈:type ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数定义>-><修饰词闭包><类型><变量>(<参数声明>){<函数块>}
+
+第2步
+栈1-符号栈:<修饰词闭包> <类型> <变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:type ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<修饰词闭包>->$
+
+第3步
+栈1-符号栈:<类型> <变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:type ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<类型>->type<取地址>
+
+第4步
+栈1-符号栈:type <取地址> <变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:type ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第5步
+栈1-符号栈:<取地址> <变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<取地址>-><星号闭包>
+
+第6步
+栈1-符号栈:<星号闭包> <变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<星号闭包>->$
+
+第7步
+栈1-符号栈:<变量> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第8步
+栈1-符号栈:<标志符> <数组下标> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第9步
+栈1-符号栈:ID <数组下标> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:ID ( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第10步
+栈1-符号栈:<数组下标> ( <参数声明> ) { <函数块> } # 
+栈2-输入栈:( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第11步
+栈1-符号栈:( <参数声明> ) { <函数块> } # 
+栈2-输入栈:( ) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第12步
+栈1-符号栈:<参数声明> ) { <函数块> } # 
+栈2-输入栈:) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<参数声明>->$
+
+第13步
+栈1-符号栈:) { <函数块> } # 
+栈2-输入栈:) { type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第14步
+栈1-符号栈:{ <函数块> } # 
+栈2-输入栈:{ type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第15步
+栈1-符号栈:<函数块> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块>-><声明语句闭包><函数块闭包>
+
+第16步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>-><声明语句><声明语句闭包>
+
+第17步
+栈1-符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句>-><声明>;
+
+第18步
+栈1-符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明>-><修饰词闭包><类型><变量><赋初值>
+
+第19步
+栈1-符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<修饰词闭包>->$
+
+第20步
+栈1-符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<类型>->type<取地址>
+
+第21步
+栈1-符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第22步
+栈1-符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<取地址>-><星号闭包>
+
+第23步
+栈1-符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<星号闭包>->$
+
+第24步
+栈1-符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第25步
+栈1-符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第26步
+栈1-符号栈:ID <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第27步
+栈1-符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第28步
+栈1-符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋初值>->=<右值>
+
+第29步
+栈1-符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第30步
+栈1-符号栈:<右值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第31步
+栈1-符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第32步
+栈1-符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第33步
+栈1-符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第34步
+栈1-符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第35步
+栈1-符号栈:number <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第36步
+栈1-符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第37步
+栈1-符号栈:<项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第38步
+栈1-符号栈:; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第39步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>-><声明语句><声明语句闭包>
+
+第40步
+栈1-符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句>-><声明>;
+
+第41步
+栈1-符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明>-><修饰词闭包><类型><变量><赋初值>
+
+第42步
+栈1-符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<修饰词闭包>->$
+
+第43步
+栈1-符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<类型>->type<取地址>
+
+第44步
+栈1-符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第45步
+栈1-符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<取地址>-><星号闭包>
+
+第46步
+栈1-符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<星号闭包>->$
+
+第47步
+栈1-符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第48步
+栈1-符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第49步
+栈1-符号栈:ID <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID = number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第50步
+栈1-符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第51步
+栈1-符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋初值>->=<右值>
+
+第52步
+栈1-符号栈:= <右值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:= number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第53步
+栈1-符号栈:<右值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第54步
+栈1-符号栈:<表达式> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第55步
+栈1-符号栈:<因子> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第56步
+栈1-符号栈:<因式> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第57步
+栈1-符号栈:<数字> <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第58步
+栈1-符号栈:number <因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第59步
+栈1-符号栈:<因式递归> <项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第60步
+栈1-符号栈:<项> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第61步
+栈1-符号栈:; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第62步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>-><声明语句><声明语句闭包>
+
+第63步
+栈1-符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句>-><声明>;
+
+第64步
+栈1-符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明>-><修饰词闭包><类型><变量><赋初值>
+
+第65步
+栈1-符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<修饰词闭包>->$
+
+第66步
+栈1-符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<类型>->type<取地址>
+
+第67步
+栈1-符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第68步
+栈1-符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<取地址>-><星号闭包>
+
+第69步
+栈1-符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<星号闭包>->$
+
+第70步
+栈1-符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第71步
+栈1-符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第72步
+栈1-符号栈:ID <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第73步
+栈1-符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:[ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->[<因式>]
+
+第74步
+栈1-符号栈:[ <因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:[ number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第75步
+栈1-符号栈:<因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第76步
+栈1-符号栈:<数字> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第77步
+栈1-符号栈:number ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第78步
+栈1-符号栈:] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:] ; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第79步
+栈1-符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋初值>->$
+
+第80步
+栈1-符号栈:; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第81步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>-><声明语句><声明语句闭包>
+
+第82步
+栈1-符号栈:<声明语句> <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句>-><声明>;
+
+第83步
+栈1-符号栈:<声明> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明>-><修饰词闭包><类型><变量><赋初值>
+
+第84步
+栈1-符号栈:<修饰词闭包> <类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<修饰词闭包>->$
+
+第85步
+栈1-符号栈:<类型> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<类型>->type<取地址>
+
+第86步
+栈1-符号栈:type <取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:type ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第87步
+栈1-符号栈:<取地址> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<取地址>-><星号闭包>
+
+第88步
+栈1-符号栈:<星号闭包> <变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<星号闭包>->$
+
+第89步
+栈1-符号栈:<变量> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第90步
+栈1-符号栈:<标志符> <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第91步
+栈1-符号栈:ID <数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:ID [ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第92步
+栈1-符号栈:<数组下标> <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:[ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->[<因式>]
+
+第93步
+栈1-符号栈:[ <因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:[ number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第94步
+栈1-符号栈:<因式> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第95步
+栈1-符号栈:<数字> ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第96步
+栈1-符号栈:number ] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:number ] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第97步
+栈1-符号栈:] <赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:] ; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第98步
+栈1-符号栈:<赋初值> ; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋初值>->$
+
+第99步
+栈1-符号栈:; <声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:; if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第100步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } # 
+栈2-输入栈:if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>->$
+
+第101步
+栈1-符号栈:<函数块闭包> } # 
+栈2-输入栈:if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>-><条件语句><函数块闭包>
+
+第102步
+栈1-符号栈:<条件语句> <函数块闭包> } # 
+栈2-输入栈:if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<条件语句>->if(<逻辑表达式>){<函数块>}<否则语句>
+
+第103步
+栈1-符号栈:if ( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:if ( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第104步
+栈1-符号栈:( <逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:( ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第105步
+栈1-符号栈:<逻辑表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+第106步
+栈1-符号栈:<表达式> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第107步
+栈1-符号栈:<因子> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第108步
+栈1-符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第109步
+栈1-符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第110步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第111步
+栈1-符号栈:ID <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第112步
+栈1-符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第113步
+栈1-符号栈:<因式递归> <项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第114步
+栈1-符号栈:<项> <逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第115步
+栈1-符号栈:<逻辑运算符> <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<逻辑运算符>-><
+
+第116步
+栈1-符号栈:< <表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第117步
+栈1-符号栈:<表达式> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第118步
+栈1-符号栈:<因子> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第119步
+栈1-符号栈:<因式> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第120步
+栈1-符号栈:<变量> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第121步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第122步
+栈1-符号栈:ID <数组下标> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第123步
+栈1-符号栈:<数组下标> <因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第124步
+栈1-符号栈:<因式递归> <项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第125步
+栈1-符号栈:<项> ) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第126步
+栈1-符号栈:) { <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:) { ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第127步
+栈1-符号栈:{ <函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:{ ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第128步
+栈1-符号栈:<函数块> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块>-><声明语句闭包><函数块闭包>
+
+第129步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>->$
+
+第130步
+栈1-符号栈:<函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>-><赋值函数><函数块闭包>
+
+第131步
+栈1-符号栈:<赋值函数> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值函数>-><变量><赋值或函数调用>
+
+第132步
+栈1-符号栈:<变量> <赋值或函数调用> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第133步
+栈1-符号栈:<标志符> <数组下标> <赋值或函数调用> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第134步
+栈1-符号栈:ID <数组下标> <赋值或函数调用> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第135步
+栈1-符号栈:<数组下标> <赋值或函数调用> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第136步
+栈1-符号栈:<赋值或函数调用> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值或函数调用>->=<右值>;
+
+第137步
+栈1-符号栈:= <右值> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第138步
+栈1-符号栈:<右值> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第139步
+栈1-符号栈:<表达式> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第140步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第141步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第142步
+栈1-符号栈:<变量> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第143步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第144步
+栈1-符号栈:ID <数组下标> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第145步
+栈1-符号栈:<数组下标> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第146步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第147步
+栈1-符号栈:<项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->+<因子><项>
+
+第148步
+栈1-符号栈:+ <因子> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第149步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第150步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第151步
+栈1-符号栈:<数字> <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第152步
+栈1-符号栈:number <因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第153步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第154步
+栈1-符号栈:<项> ; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第155步
+栈1-符号栈:; <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第156步
+栈1-符号栈:<函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>-><for循环><函数块闭包>
+
+第157步
+栈1-符号栈:<for循环> <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<for循环>->for(<赋值函数><逻辑表达式>;<后缀表达式>){<函数块>}
+
+第158步
+栈1-符号栈:for ( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:for ( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第159步
+栈1-符号栈:( <赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:( ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第160步
+栈1-符号栈:<赋值函数> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值函数>-><变量><赋值或函数调用>
+
+第161步
+栈1-符号栈:<变量> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第162步
+栈1-符号栈:<标志符> <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第163步
+栈1-符号栈:ID <数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第164步
+栈1-符号栈:<数组下标> <赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第165步
+栈1-符号栈:<赋值或函数调用> <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值或函数调用>->=<右值>;
+
+第166步
+栈1-符号栈:= <右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第167步
+栈1-符号栈:<右值> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第168步
+栈1-符号栈:<表达式> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第169步
+栈1-符号栈:<因子> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第170步
+栈1-符号栈:<因式> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第171步
+栈1-符号栈:<数字> <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第172步
+栈1-符号栈:number <因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第173步
+栈1-符号栈:<因式递归> <项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第174步
+栈1-符号栈:<项> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第175步
+栈1-符号栈:; <逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第176步
+栈1-符号栈:<逻辑表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<逻辑表达式>-><表达式><逻辑运算符><表达式>
+
+第177步
+栈1-符号栈:<表达式> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第178步
+栈1-符号栈:<因子> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第179步
+栈1-符号栈:<因式> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第180步
+栈1-符号栈:<变量> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第181步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第182步
+栈1-符号栈:ID <数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID < number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第183步
+栈1-符号栈:<数组下标> <因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第184步
+栈1-符号栈:<因式递归> <项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第185步
+栈1-符号栈:<项> <逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第186步
+栈1-符号栈:<逻辑运算符> <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<逻辑运算符>-><
+
+第187步
+栈1-符号栈:< <表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:< number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第188步
+栈1-符号栈:<表达式> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第189步
+栈1-符号栈:<因子> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第190步
+栈1-符号栈:<因式> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第191步
+栈1-符号栈:<数字> <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第192步
+栈1-符号栈:number <因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第193步
+栈1-符号栈:<因式递归> <项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第194步
+栈1-符号栈:<项> ; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第195步
+栈1-符号栈:; <后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第196步
+栈1-符号栈:<后缀表达式> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<后缀表达式>-><变量><后缀运算符>
+
+第197步
+栈1-符号栈:<变量> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第198步
+栈1-符号栈:<标志符> <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第199步
+栈1-符号栈:ID <数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID ++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第200步
+栈1-符号栈:<数组下标> <后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第201步
+栈1-符号栈:<后缀运算符> ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<后缀运算符>->++
+
+第202步
+栈1-符号栈:++ ) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:++ ) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第203步
+栈1-符号栈:) { <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:) { ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第204步
+栈1-符号栈:{ <函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:{ ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第205步
+栈1-符号栈:<函数块> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块>-><声明语句闭包><函数块闭包>
+
+第206步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>->$
+
+第207步
+栈1-符号栈:<函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>-><赋值函数><函数块闭包>
+
+第208步
+栈1-符号栈:<赋值函数> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值函数>-><变量><赋值或函数调用>
+
+第209步
+栈1-符号栈:<变量> <赋值或函数调用> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第210步
+栈1-符号栈:<标志符> <数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第211步
+栈1-符号栈:ID <数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第212步
+栈1-符号栈:<数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第213步
+栈1-符号栈:<赋值或函数调用> <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<赋值或函数调用>->=<右值>;
+
+第214步
+栈1-符号栈:= <右值> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第215步
+栈1-符号栈:<右值> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第216步
+栈1-符号栈:<表达式> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第217步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第218步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第219步
+栈1-符号栈:<变量> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第220步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第221步
+栈1-符号栈:ID <数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:ID + number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第222步
+栈1-符号栈:<数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第223步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第224步
+栈1-符号栈:<项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->+<因子><项>
+
+第225步
+栈1-符号栈:+ <因子> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:+ number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第226步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第227步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第228步
+栈1-符号栈:<数字> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; } } else { ID = ID + number ; } return number ; } # 
+产生式：<数字>->number
+
+第229步
+栈1-符号栈:number <因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:number ; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第230步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; } } else { ID = ID + number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第231步
+栈1-符号栈:<项> ; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; } } else { ID = ID + number ; } return number ; } # 
+产生式：<项>->$
+
+第232步
+栈1-符号栈:; <函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:; } } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第233步
+栈1-符号栈:<函数块闭包> } <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:} } else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>->$
+
+第234步
+栈1-符号栈:} <函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:} } else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第235步
+栈1-符号栈:<函数块闭包> } <否则语句> <函数块闭包> } # 
+栈2-输入栈:} else { ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>->$
+
+第236步
+栈1-符号栈:} <否则语句> <函数块闭包> } # 
+栈2-输入栈:} else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第237步
+栈1-符号栈:<否则语句> <函数块闭包> } # 
+栈2-输入栈:else { ID = ID + number ; } return number ; } # 
+产生式：<否则语句>->else{<函数块>}
+
+第238步
+栈1-符号栈:else { <函数块> } <函数块闭包> } # 
+栈2-输入栈:else { ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第239步
+栈1-符号栈:{ <函数块> } <函数块闭包> } # 
+栈2-输入栈:{ ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第240步
+栈1-符号栈:<函数块> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<函数块>-><声明语句闭包><函数块闭包>
+
+第241步
+栈1-符号栈:<声明语句闭包> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<声明语句闭包>->$
+
+第242步
+栈1-符号栈:<函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<函数块闭包>-><赋值函数><函数块闭包>
+
+第243步
+栈1-符号栈:<赋值函数> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<赋值函数>-><变量><赋值或函数调用>
+
+第244步
+栈1-符号栈:<变量> <赋值或函数调用> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第245步
+栈1-符号栈:<标志符> <数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第246步
+栈1-符号栈:ID <数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID = ID + number ; } return number ; } # 
+该句成功匹配!
+第247步
+栈1-符号栈:<数组下标> <赋值或函数调用> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第248步
+栈1-符号栈:<赋值或函数调用> <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } return number ; } # 
+产生式：<赋值或函数调用>->=<右值>;
+
+第249步
+栈1-符号栈:= <右值> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:= ID + number ; } return number ; } # 
+该句成功匹配!
+第250步
+栈1-符号栈:<右值> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<右值>-><表达式>
+
+第251步
+栈1-符号栈:<表达式> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<表达式>-><因子><项>
+
+第252步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第253步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<因式>-><变量>
+
+第254步
+栈1-符号栈:<变量> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<变量>-><标志符><数组下标>
+
+第255步
+栈1-符号栈:<标志符> <数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+产生式：<标志符>->ID
+
+第256步
+栈1-符号栈:ID <数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:ID + number ; } return number ; } # 
+该句成功匹配!
+第257步
+栈1-符号栈:<数组下标> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:+ number ; } return number ; } # 
+产生式：<数组下标>->$
+
+第258步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:+ number ; } return number ; } # 
+产生式：<因式递归>->$
+
+第259步
+栈1-符号栈:<项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:+ number ; } return number ; } # 
+产生式：<项>->+<因子><项>
+
+第260步
+栈1-符号栈:+ <因子> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:+ number ; } return number ; } # 
+该句成功匹配!
+第261步
+栈1-符号栈:<因子> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:number ; } return number ; } # 
+产生式：<因子>-><因式><因式递归>
+
+第262步
+栈1-符号栈:<因式> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:number ; } return number ; } # 
+产生式：<因式>-><数字>
+
+第263步
+栈1-符号栈:<数字> <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:number ; } return number ; } # 
+产生式：<数字>->number
+
+第264步
+栈1-符号栈:number <因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:number ; } return number ; } # 
+该句成功匹配!
+第265步
+栈1-符号栈:<因式递归> <项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:; } return number ; } # 
+产生式：<因式递归>->$
+
+第266步
+栈1-符号栈:<项> ; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:; } return number ; } # 
+产生式：<项>->$
+
+第267步
+栈1-符号栈:; <函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:; } return number ; } # 
+该句成功匹配!
+第268步
+栈1-符号栈:<函数块闭包> } <函数块闭包> } # 
+栈2-输入栈:} return number ; } # 
+产生式：<函数块闭包>->$
+
+第269步
+栈1-符号栈:} <函数块闭包> } # 
+栈2-输入栈:} return number ; } # 
+该句成功匹配!
+第270步
+栈1-符号栈:<函数块闭包> } # 
+栈2-输入栈:return number ; } # 
+产生式：<函数块闭包>-><函数返回><函数块闭包>
+
+第271步
+栈1-符号栈:<函数返回> <函数块闭包> } # 
+栈2-输入栈:return number ; } # 
+产生式：<函数返回>->return<因式>;
+
+第272步
+栈1-符号栈:return <因式> ; <函数块闭包> } # 
+栈2-输入栈:return number ; } # 
+该句成功匹配!
+第273步
+栈1-符号栈:<因式> ; <函数块闭包> } # 
+栈2-输入栈:number ; } # 
+产生式：<因式>-><数字>
+
+第274步
+栈1-符号栈:<数字> ; <函数块闭包> } # 
+栈2-输入栈:number ; } # 
+产生式：<数字>->number
+
+第275步
+栈1-符号栈:number ; <函数块闭包> } # 
+栈2-输入栈:number ; } # 
+该句成功匹配!
+第276步
+栈1-符号栈:; <函数块闭包> } # 
+栈2-输入栈:; } # 
+该句成功匹配!
+第277步
+栈1-符号栈:<函数块闭包> } # 
+栈2-输入栈:} # 
+产生式：<函数块闭包>->$
+
+第278步
+栈1-符号栈:} # 
+栈2-输入栈:} # 
+该句成功匹配!
+第279步
+栈1-符号栈:# 
+栈2-输入栈:# 
+语法分析成功！
